@@ -1,0 +1,10 @@
+<div class="form-group">
+    <label class="form-label" for="message">Hvad siger trumpen?</label>
+    <textarea class="form-input" id="message" [(ngModel)]="message" placeholder="Skriv noget.."></textarea>
+  </div>
+  <button (click)='setFefe(message)' class="btn">Det er fefe</button>
+  <button (click)='setLunch(message)' class="btn">Det er frokost</button>
+  <button (click)='setRiften(message)' class="btn">Det er riften</button>
+  <br>
+  <br>
+  <a class="btn btn-link" href="{{Link.url}}" style="word-wrap: break-word">{{Link.url}}</a>
