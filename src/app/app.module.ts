@@ -9,6 +9,7 @@ import { LunchComponent } from './lunch/lunch.component';
 import { HomeComponent } from './home/home.component';
 import { RiftenComponent } from './riften/riften.component';
 import { JokesComponent } from './jokes/jokes.component';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'fefe/:message', component : FefeComponent},
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
       appRoutes, {
         useHash: true
       }
-    )
+    ),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

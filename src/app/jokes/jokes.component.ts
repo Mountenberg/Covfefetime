@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 export class Joke{
   title: string;
@@ -18,30 +19,21 @@ export class Joke{
 })
 export class JokesComponent implements OnInit {
 
-  jokes:Joke[] = [
-    {
-    title: "Best joke ever",
-    createdBy: "MMB",
-    joke: "Hahahaha",
-    punchline: "Endu mere haha",
-    votesUp: 0,
-    votesDown: 100
-  },
-  {
-    title: "Best joke ever",
-    createdBy: "MMB",
-    joke: "Den her er også sjov",
-    punchline: "Lalallalalalala",
-    votesUp: 0,
-    votesDown: 100
-  }
-]
+  
+
+  jokes:Joke[];
 
 
 
-  constructor() { }
+  constructor(private _http: HttpClient) {}
 
-  ngOnInit() {
-  }
 
+  
+
+  ngOnInit() {   
+    this._http.get("http://covfefetime.dk/php/phptest.php", {responseType: "json"}).subscribe(data =>{
+      this.jokes = data["results"];
+  });
+
+}
 }
