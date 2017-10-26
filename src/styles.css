@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.joke-wrapper{
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+    padding: 10px;
+}
+
+.joke-wrapper:hover{
+    background-color: #454d5d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-menu{
+    width:100%;
+}
+
+.btn-menu .right{
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.btn-menu .madeby{
+    text-align: left;
+}

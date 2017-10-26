@@ -1,0 +1,36 @@
+<div *ngFor="let joke of jokes" class="col-lg-12">
+
+    <h4>{{joke.title}}</h4>
+    
+    <p class="bg-gray">
+      
+    </p>
+    
+    <div class="popover" style="width:100%;">
+      
+            <p class="">
+                {{joke.joke}}
+            </p>
+
+        <div class="popover-container">
+          <div class="card">
+            <div class="card-body">
+                {{joke.punchline}}
+            </div>
+          </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="btn-menu">
+      <span class="madeby">{{joke.createdBy}}</span>
+    <button class="btn badge right" data-badge="3">
+      Op
+    </button>
+    <button class="btn badge right" data-badge="2">
+      Ned
+    </button>
+  </div>
+    <hr>
+</div>
+

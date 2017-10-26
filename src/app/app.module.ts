@@ -8,11 +8,13 @@ import { FefeComponent } from './fefe/fefe.component'
 import { LunchComponent } from './lunch/lunch.component';
 import { HomeComponent } from './home/home.component';
 import { RiftenComponent } from './riften/riften.component';
+import { JokesComponent } from './jokes/jokes.component';
 
 const appRoutes: Routes = [
   {path: 'fefe/:message', component : FefeComponent},
   {path: 'lunch/:message', component : LunchComponent},
   {path: 'riften/:message', component : RiftenComponent},
+  {path: 'jokes', component : JokesComponent},
   {path: '', component: HomeComponent},
   {path: '', redirectTo: '/home',pathMatch: 'full'}
 ]
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     FefeComponent,
     LunchComponent,
     HomeComponent,
-    RiftenComponent
+    RiftenComponent,
+    JokesComponent
   ],
   imports: [
     BrowserModule,
