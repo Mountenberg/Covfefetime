@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export class Joke{
+  0?:any;
+  1?:any;
+  2?:any;
+  3?:any;
+  4?:any;
+  5?:any;
   title: string;
   createdBy: string;
   joke: string;
@@ -19,7 +25,6 @@ export class Joke{
 })
 export class JokesComponent implements OnInit {
 
-  
 
   jokes:Joke[];
 
@@ -31,8 +36,10 @@ export class JokesComponent implements OnInit {
   
 
   ngOnInit() {   
-    this._http.get("http://covfefetime.dk/php/phptest.php", {responseType: "json"}).subscribe(data =>{
-      this.jokes = data["results"];
+    this._http.get("http://covfefetime.dk/php/phptest.php", {responseType: "text"}).subscribe(data =>{
+
+    this.jokes = JSON.parse(data);
+      console.log(data);
   });
 
 }

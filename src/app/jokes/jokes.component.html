@@ -24,13 +24,12 @@
     <br>
     <div class="btn-menu">
       <span class="madeby">{{joke.createdBy}}</span>
-    <button class="btn badge right" data-badge="3">
-      Op
+    <button class="btn badge right" [attr.data-badge]="joke.votesUp">
+      Jajajaja 
     </button>
-    <button class="btn badge right" data-badge="2">
-      Ned
+    <button class="btn badge right" [attr.data-badge]="jokes.votesDown">
+      nejenjenjenj 
     </button>
   </div>
     <hr>
 </div>
-
