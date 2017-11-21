@@ -47,4 +47,8 @@ export class JokesComponent implements OnInit {
 showJokes(){
   document.getElementById("jokeform").classList.remove("hideform");
 }
+
+saveJoke(){
+  alert("Venner, vent lidt - det virker ikke endnu!");
+}
 }
