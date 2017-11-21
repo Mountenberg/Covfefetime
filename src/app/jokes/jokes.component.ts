@@ -43,4 +43,8 @@ export class JokesComponent implements OnInit {
   });
 
 }
+
+showJokes(){
+  document.getElementById("jokeform").classList.remove("hideform");
+}
 }
