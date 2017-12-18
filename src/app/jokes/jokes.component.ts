@@ -45,7 +45,11 @@ export class JokesComponent implements OnInit {
 }
 
 showJokes(){
-  document.getElementById("jokeform").classList.remove("hideform");
+  document.getElementById("jokemodal").classList.add("active");
+}
+
+removeJokeModal(){
+  document.getElementById("jokemodal").classList.remove("active");
 }
 
 saveJoke(){

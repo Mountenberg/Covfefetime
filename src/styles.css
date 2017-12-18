@@ -25,3 +25,11 @@
 .btn-menu .madeby{
     text-align: left;
 }
+
+section.navbar-center{
+    padding: 10px;
+}
+
+span.votes{
+    margin-right: 3px;
+}

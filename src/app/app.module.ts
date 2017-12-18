@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -9,15 +9,16 @@ import { LunchComponent } from './lunch/lunch.component';
 import { HomeComponent } from './home/home.component';
 import { RiftenComponent } from './riften/riften.component';
 import { JokesComponent } from './jokes/jokes.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ngclipboard } from 'clipboard';
 
 const appRoutes: Routes = [
-  {path: 'fefe/:message', component : FefeComponent},
-  {path: 'lunch/:message', component : LunchComponent},
-  {path: 'riften/:message', component : RiftenComponent},
-  {path: 'jokes', component : JokesComponent},
-  {path: '', component: HomeComponent},
-  {path: '', redirectTo: '/home',pathMatch: 'full'}
+  { path: 'fefe/:message', component: FefeComponent },
+  { path: 'lunch/:message', component: LunchComponent },
+  { path: 'riften/:message', component: RiftenComponent },
+  { path: 'jokes', component: JokesComponent },
+  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 
 @NgModule({

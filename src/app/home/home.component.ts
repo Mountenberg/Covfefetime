@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel} from '@angular/forms';
+import { ngclipboard } from 'clipboard'
 
 export class Link{
   url?: string;
@@ -10,11 +11,15 @@ export class Link{
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   Link: Link = {
     
   };
+
+  ngOnInit(){
+    
+  }
 
   setFefe(message: string, html: any): void{
     let baseMessage: string = btoa(message);
@@ -31,5 +36,6 @@ export class HomeComponent {
     let baseMessage: string = btoa(message);
     this.Link.url = `http://covfefetime.dk/#/riften/${baseMessage}`;
   }
+
 
 }
